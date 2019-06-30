@@ -1,0 +1,73 @@
+body {
+    background-color: lightgray;
+}
+
+h2 {
+    color: darkred;
+}
+
+#chat {
+    border: 3px solid gold;
+    border-radius: 12px;
+    width: 60%;
+    height: 80%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#chitchat {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
+
+.attr {
+    border: 2px solid black;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+table {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #555555;
+    color: gold;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#monster {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#stats, #characters {
+    display: inline-block;
+}
+
+#talk {
+    width: 50em;
+    height: 33px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#list {
+    overflow: auto;
+    height: 80%;
+}
+
+#chatbutton {
+    border-radius: 0px 10px 10px 0px;
+}
+
+#login_name {
+    margin: 0px 0px 15px 25px;
+}
