@@ -78,3 +78,24 @@ button {
     width: 600px;
     height: 320px;
 }
+
+#login {
+    display: grid;
+    width: 100%;
+    grid-template-areas:    "header"
+                            "main";
+}
+
+#login > header {
+    grid-area: header;
+    margin-left: 20%;
+}
+
+#login > main {
+    grid-area: main;
+    margin-left: 15%;
+}
+
+select {
+    margin: 15px 5px;
+}
