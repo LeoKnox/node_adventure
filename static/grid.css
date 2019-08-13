@@ -82,18 +82,22 @@ button {
 #login {
     display: grid;
     width: 100%;
-    grid-template-areas:    "header"
-                            "main";
+    grid-template-areas:    "title"
+                            "loginForm";
 }
 
-#login > header {
-    grid-area: header;
+#title {
+    grid-area: title;
     margin-left: 20%;
 }
 
-#login > main {
-    grid-area: main;
+#loginForm {
+    grid-area: loginForm;
     margin-left: 15%;
+}
+
+.lt {
+    text-decoration: line-through;
 }
 
 select {
