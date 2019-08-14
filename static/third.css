@@ -5,12 +5,15 @@
 }
 
 #main {
+    display: grid;
+    width: 100%;
     height: 100%;
+    grid-template-areas:    "chat chat chat stats monster"
 }
 
 #chat {
+    grid-area: chat;
     border:2px solid blue;
-    width: 44%;
     display: inline-block;
 }
 
@@ -34,10 +37,12 @@
 }
 
 #stats {
+    grid-area: stats;
     display: inline-block;
 }
 
 #monster {
+    grid-area: monster;
     border: 2px solid black;
     display: inline-block;
 }

@@ -128,6 +128,10 @@ app.get('/main', (req, res) => {
     })
 })
 
+app.get('*', (req, res) => {
+    res.redirect('/')
+})
+
 http.listen(3000, function() {
     console.log('listening on port 3000')
 })
