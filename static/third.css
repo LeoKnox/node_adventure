@@ -11,6 +11,7 @@
     grid-template-areas:    
         ". . title . ."
         "chat chat chat stats monster"
+        "chat chat chat stats monster"
 }
 
 #chat {
@@ -29,6 +30,7 @@
 
 #talk {
     grid-column: 1/6;
+    grid-row: 3;
     border: 2px solid green;
     min-height: 100px;
 }
