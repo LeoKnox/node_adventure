@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-#main, #talk {
+#main {
     height: 100%;
     display: grid;
     grid-template-rows: 5em auto 15em;
@@ -25,15 +25,11 @@
 }
 
 #list {
-    height: auto;
-    grid-column: 1/4;
-    grid-row: 1/4;
+    height: calc(100% - 1em);
 }
 
 #chitchat {
-    border: 2px solid orange;
-    grid-column: 1/4;
-    grid-row: 4;
+    height: 1em;
 }
 
 #talk {
@@ -41,6 +37,7 @@
     grid-row: 3;
     border: 2px solid green;
     min-height: 100px;
+    display: grid;
 }
 
 #title {
