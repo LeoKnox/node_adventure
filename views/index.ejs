@@ -24,6 +24,8 @@
                 $('#messages').prepend($('<li>').text(msg.sender + ": " + msg.message))
             })
             socket.on('move action', function(msg) {
+                let testwall = document.getElementById("room").clientWidth-100;
+                console.log(`<<<<<< room: `+testwall);
                 $('#drawing').attr('height', msg.height)
                 $('#drawing').attr('width', msg.width)
                 $('#drawing').attr('x', msg.wallx)
@@ -56,6 +58,12 @@
         <div id="chat">
             <div id="map">
                 <svg id="room" >
+                    <!--<rect id="drawing" x="<%= dungeon.wallx %>" y="<%= dungeon.wally %>" rx="1" ry="1"
+                        width = "<%= dungeon.width %>" height="<%= dungeon.height %>"
+                        stroke="gray" stroke-width="16"
+                        style="fill:black;"
+                    />
+                    origin working code ^^^^; experimental css calc code vvvv -->
                     <rect id="drawing" x="<%= dungeon.wallx %>" y="<%= dungeon.wally %>" rx="1" ry="1"
                         width = "<%= dungeon.width %>" height="<%= dungeon.height %>"
                         stroke="gray" stroke-width="16"
