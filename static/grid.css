@@ -103,3 +103,7 @@ button {
 select {
     margin: 15px 5px;
 }
+
+#newroom {
+    border: 4px solid black;
+}
