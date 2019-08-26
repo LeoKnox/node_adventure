@@ -7,6 +7,7 @@ const io = require('socket.io')(http)
 const MongoClient = require('mongodb').MongoClient
 const url = "mongodb://localhost:27017/"
 const path = require('path')
+const adv = require('./static/class.js')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, './static')))
@@ -94,36 +95,6 @@ app.post('/new', (req, res) => {
     res.redirect('/main')
 })
 
-app.get('/third', (req, res) => {
-    MongoClient.connect(url, function(err, db){
-        if (err) {
-            console.log(err)
-        } else {
-            var dbo = db.db("node_adventure")
-            dbo.collection("dungeon").findOne({name: "Begin"})
-                .then(params => {
-                    let wallx = (898-params.width*40)/2
-                    let wally = (338-params.height*40)/2
-                    for (let i = 0; i<params.door.length; i++) {
-                        params.door[i].x = wallx + params.door[i].x*40-7
-                        params.door[i].y = wally + params.door[i].y*40-12
-                    }
-                    let dungeon = {
-                        height: params.height*40,
-                        width: params.width*40,
-                        wallx: wallx,
-                        wally: wally,
-                        params: params
-                    }
-                    res.render('fourth', {user: req.session.user, dungeon})
-                })
-                .catch(err => {
-                    console.log(err)
-                })
-        }
-    })
-});
-
 app.get('/main', (req, res) => {
     MongoClient.connect(url, function(err, db){
         if (err) {
@@ -152,6 +123,12 @@ app.get('/main', (req, res) => {
                 })
         }
     })
+})
+
+app.get('/character', (req,res) => {
+    new adv();
+    console.log(typeof adv);
+    res.render('character_builder', adv);
 })
 
 app.get('*', (req, res) => {
