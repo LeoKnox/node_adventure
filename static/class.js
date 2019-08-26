@@ -8,4 +8,4 @@ class Adventurer {
     }
 }
 
-export default Adventurer;
+module.exports = Adventurer;

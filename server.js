@@ -7,7 +7,7 @@ const io = require('socket.io')(http)
 const MongoClient = require('mongodb').MongoClient
 const url = "mongodb://localhost:27017/"
 const path = require('path')
-const adv = require('./static/class.js')
+const Adventurer =  require('./static/class');
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, './static')))
@@ -125,9 +125,9 @@ app.get('/main', (req, res) => {
     })
 })
 
-app.get('/character', (req,res) => {
-    new adv();
-    console.log(typeof adv);
+app.get('/character', (req, res) => {
+    let adv = new Adventurer("");
+    console.log(adv);
     res.render('character_builder', adv);
 })
 
