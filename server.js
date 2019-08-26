@@ -127,8 +127,7 @@ app.get('/main', (req, res) => {
 
 app.get('/character', (req, res) => {
     let adv = new Adventurer("");
-    console.log(adv);
-    res.render('character_builder', adv);
+    res.render('character_builder', adv= { adv });
 })
 
 app.get('*', (req, res) => {
