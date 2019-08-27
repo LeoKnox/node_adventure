@@ -3,9 +3,18 @@
         <title>Build your character</title>
     </head>
     <body>
+        <link href="/character_builder.css" rel="stylesheet" type="text/css">
         <h1>Building better canon fodder ... I mean characters</h1>
+        <form>
         <% for (var stat in adv) { %>
-            <p><%= stat %>:<%= adv[stat] %></p>
+            <p>
+                <label class="charStat"><%= stat %></label>:<input
+                    class="charInput" type="text" name=<%= stat %>
+                    value=<%= adv[stat] %>
+                >
+            </p>
         <% } %>
+        <button>Submit</button>
+        </form>
     </body>
 </html>
