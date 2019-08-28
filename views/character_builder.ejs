@@ -6,6 +6,7 @@
         <link href="/character_builder.css" rel="stylesheet" type="text/css">
         <h1>Building better canon fodder ... I mean characters</h1>
         <form>
+            <p>Name:<input class="charName" type="text" name="charName" /></p>
         <% for (var stat in adv) { %>
             <p>
                 <label class="charStat"><%= stat %></label>:<input
@@ -13,6 +14,10 @@
                     value=<%= adv[stat] %>
                 >
             </p>
+        <% } %>
+        <% if (weapons.length > 0){ %>
+            <p>Weapons: <% weapons[0] %></p>
+        <% } else { %>
         <% } %>
         <button>Submit</button>
         </form>

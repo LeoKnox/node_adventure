@@ -126,8 +126,12 @@ app.get('/main', (req, res) => {
 })
 
 app.get('/character', (req, res) => {
-    let adv = new Adventurer("");
-    res.render('character_builder', adv= { adv });
+    let start = new Adventurer("");
+    const name = start.name;
+    const weapons = ["gun", "knife"];
+    const {atk, def, hp, mgc} = start;
+    let adv = {atk, def, hp, mgc};
+    res.render('character_builder', adv= { name, adv, weapons});
 })
 
 app.get('*', (req, res) => {
