@@ -16,7 +16,10 @@
             </p>
         <% } %>
         <% if (weapons.length > 0){ %>
-            <p>Weapons: <%= weapons %></p>
+            Weapons:
+            <% for (var weapon in weapons) { %>
+                <p><%= weapons[weapon] %></p>
+            <% } %>
         <% } else { %>
         <% } %>
         <button>Submit</button>
