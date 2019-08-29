@@ -8,8 +8,8 @@
         <form>
             <p>Name:<input class="charName" type="text" name="charName" /></p>
         <% for (var stat in adv) { %>
-            <p>
-                <label class="charStat"><%= stat %></label>:<input
+            <p class="stats">
+                <label class="charStat"><%= stat %></label> | <input
                     class="charInput" type="text" name=<%= stat %>
                     value=<%= adv[stat] %>
                 >

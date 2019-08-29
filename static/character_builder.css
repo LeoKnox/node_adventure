@@ -1,8 +1,14 @@
 .charStat {
-    width: 20px;
+    width: 3%;
+    padding: 3px 0 3px 8px;
+    margin: 0;
     background: lightgray;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid blue;
 }
 
 .charInput {
-    width: 15em;
+    width: 2%;
+    height: 2.2em;
 }
